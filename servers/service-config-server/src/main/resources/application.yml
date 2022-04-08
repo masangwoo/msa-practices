@@ -26,7 +26,7 @@ spring:
             encrypt.enabled: true
             git:
                uri: https://github.com/masangwoo/msa-practices-config-repo
-               searchPaths: service-emaillist, service-storatge, service-gallery, service-guestbook
+               searchPaths: service-emaillist, service-storage, service-gallery, service-guestbook
 logging:
    pattern:
       file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"

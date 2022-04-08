@@ -21,9 +21,9 @@ public class ApiController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<?> post(@RequestBody GalleryVo galleyVo) {
-		galleryService.addGalleryImage(galleyVo);
-		return ResponseEntity.status(HttpStatus.OK).body(galleyVo);
+	public ResponseEntity<?> post(@RequestBody GalleryVo galleryVo) {
+		galleryService.addGalleryImage(galleryVo);
+		return ResponseEntity.status(HttpStatus.OK).body(galleryVo);
 	}
 	
 	@DeleteMapping(value="/{no}")
