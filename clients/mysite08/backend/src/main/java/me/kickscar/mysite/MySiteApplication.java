@@ -1,4 +1,4 @@
-package me.kickscar.emaillist;
+package me.kickscar.mysite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,15 +7,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class EmaillistApplication {
-	
-	public static void main(String[] args) {
-		SpringApplication.run(EmaillistApplication.class, args);
-	}
+public class MySiteApplication {
 
-	//@LoadBalanced : GW 사용
-	@Bean
-	public RestTemplate restTemplte() {
-		return new RestTemplate();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MySiteApplication.class, args);
+    }
+
+    @LoadBalanced
+    @Bean
+    public RestTemplate restTemplte() {
+        return new RestTemplate();
+    }
 }

@@ -22,7 +22,7 @@ import me.kickscar.emaillist.vo.EmaillistVo;
 public class ApiController {
 	
 	@Autowired
-	@LoadBalanced
+	//@LoadBalanced
 	private RestTemplate restTemplate;
 	
 	@GetMapping("/api")
@@ -30,7 +30,8 @@ public class ApiController {
 		
 		log.info("Request[GET /api]");
 		
-		EmaillistVo[] result = restTemplate.getForObject("http://service-emaillist/api?kw="+keyword, EmaillistVo[].class);
+//		EmaillistVo[] result = restTemplate.getForObject("http://service-emaillist/api?kw="+keyword, EmaillistVo[].class);
+		EmaillistVo[] result = restTemplate.getForObject("http://localhost:5555/emaillist/api?kw="+keyword, EmaillistVo[].class);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -39,8 +40,9 @@ public class ApiController {
 	
 	@PostMapping("/api")
 	public ResponseEntity<JsonResult> create(@RequestBody EmaillistVo vo) {
-		EmaillistVo result = restTemplate.postForObject("http://service-emaillist/api", vo, EmaillistVo.class);
-		
+//		EmaillistVo result = restTemplate.postForObject("http://service-emaillist/api", vo, EmaillistVo.class);
+		EmaillistVo result = restTemplate.postForObject("http://localhost:5555/emaillist/api", vo, EmaillistVo.class);
+
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(JsonResult.success(result));
