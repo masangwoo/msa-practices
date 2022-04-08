@@ -16,7 +16,8 @@ public class ServiceStorage {
 	}
 
 	@Bean
-	ApplicationRunner HttpdStarter() {
+	ApplicationRunner httpdStarter() {
+		
 		return new ApplicationRunner() {
 			@Autowired
 			private SimpleHttpd httpd;
