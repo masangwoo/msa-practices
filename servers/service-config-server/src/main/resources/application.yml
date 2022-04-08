@@ -56,7 +56,8 @@ spring:
           native:
               searchLocations: file:C:\Users\user\Desktop\포스코ICT\sts-workspace\msa-practices-config-repo\service-emaillist,
                                file:C:\Users\user\Desktop\포스코ICT\sts-workspace\msa-practices-config-repo\service-storage,
-                               file:C:\Users\user\Desktop\포스코ICT\sts-workspace\msa-practices-config-repo\service-gallery
+                               file:C:\Users\user\Desktop\포스코ICT\sts-workspace\msa-practices-config-repo\service-gallery,
+                               file:C:\Users\user\Desktop\포스코ICT\sts-workspace\msa-practices-config-repo\service-guestbook
 logging:
    pattern:
       console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
